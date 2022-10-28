@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html style="scroll-behavior: smooth;" class="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -8,150 +8,181 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link href="/dist/output.css" rel="stylesheet">
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="./dist/toggle.css">
     <title>Portfolio</title>
 </head>
 
-<body class="bg-[url(./0d0eee7.png)] bg-cover h-screen">
+<body class="bg-slate-900 dark:bg-[url(./0d0eee7.png)] bg-cover h-screen">
     <div className='font-inter'>
         <div style="max-width: 64rem;margin-left: auto;margin-right: auto;width: 91.666667%;">
-            <div class="shadow-md w-full fixed top-0 left-0 z-[2]">
-                <div class="flex items-center justify-between bg-slate-800 py-4 md:px-10 px-7 transition-all ease-in">
-                    <div class="cursor-pointer items-center">
-                        <a href="#home">
-                            <img src="./public/AfnanSiregar.png" class="w-24 md:w-24 object-cover" alt="AfnanSiregar">
-                        </a>
+            <nav class="shadow-md w-full fixed top-0 left-0 z-[2]">
+                <div class="flex items-center justify-between bg-slate-800 py-4 md:px-10 px-7">
+                    <div
+                        class="font-semibold text-2xl cursor-pointer flex text-center items-center font-[Poppins] text-gray-200 transition-all duration-500 ease-in">
+                        <span className='text-3xl dark:text-indigo-600 text-white mr-1 pt-2'>
+                            <ion-icon name="logo-xbox" class="hover:animate-spin"></ion-icon>
+                            <ion-icon name="logo-playstation" class="hover:animate-spin"></ion-icon>
+                            <ion-icon name="logo-steam" class="hover:animate-spin"></ion-icon>
+                            <ion-icon name="logo-google-playstore" class="hover:animate-spin"></ion-icon>
+                            <h1 class="hover:animate-bounce">AfnanSiregar</h1>
+                        </span>
+                        <div
+                            class="flex fixed justify-end items-center space-x-2 mx-auto z-10 right-0 top-24 py-2 px-2">
+                            <div class="hover:animate-pulse">
+                                <label for="checkbox" class="switch">
+                                    <input type="checkbox" id="checkbox" hidden />
+                                    <div class="slider round"></div>
+                                </label>
+                            </div>
+                        </div>
                     </div>
-                    <ul
-                        class="flex text-white bg-slate-800 md:z-auto z-[-1] left-0 w-full md:w-auto pl-9 transition-all duration-75 ease-in">
+                    <ul class="flex items-center text-white bg-slate-800 md:z-auto z-[-1] left-0 w-full md:w-auto pl-9
+                        transition-all duration-75 ease-in">
                         <li class="md:ml-8 text-xl md:my-0 my-7">
-                            <a href="#home">HOME</a>
+                            <a href="#home">HOME
+                                <ion-icon name="home" class="animate-bounce"></ion-icon>
+                            </a>
                         </li>
                         <li class="md:ml-8 text-xl md:my-0 my-7">
-                            <a href="#services">SERVICES</a>
+                            <a href="#services">SERVICES
+                                <ion-icon name="logo-ionic" class="animate-bounce"></ion-icon>
+                            </a>
                         </li>
                         <li class="md:ml-8 text-xl md:my-0 my-7">
-                            <a href="#works">WORKS</a>
+                            <a href="#works">WORKS
+                                <ion-icon name="logo-react" class="animate-bounce"></ion-icon>
+                            </a>
                         </li>
                         <li class="md:ml-8 text-xl md:my-0 my-7">
-                            <a href="#about">ABOUT</a>
+                            <a href="#about">ABOUT
+                                <ion-icon name="game-controller" class="animate-bounce"></ion-icon>
+                            </a>
                         </li>
                     </ul>
                 </div>
-            </div>
+            </nav>
             <section class="py-36" id="home">
                 <div class="flex items-center justify-center flex-col py-20">
                     <div class="text-center">
                         <h1 class="text-2xl md:text-4xl mb-1 md:mb-3 text-indigo-600 transition-all ease-in">
                             Hi, I'm Afnan. <br> A Programmer.
                         </h1>
-                        <p class='text-md md:text-xl max-w-md mb-3 text-gray-600'>I'm a front-end
+                        <p class='text-md md:text-xl max-w-md mb-3 dark:text-gray-600 text-gray-300'>I'm a front-end
                             developer with high curiosity in technology
                         </p>
                         <a href="#works"
-                            class="inline-block px-8 py-3 text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:text-md">See
+                            class="inline-block hover:duration-1000 hover:animate-pulse px-8 py-3 text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:text-md">See
                             Works
                         </a>
                     </div>
                 </div>
             </section>
             <h1 class="text-3xl font-bold mb-5 text-indigo-600" id="services">Services</h1>
-            <div class="py-12">
+            <section class="py-12">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-                    <div class="bg-slate-300 hover:bg-slate-200 hover:-translate-y-4 z-[1] transition p-5 rounded-md">
-                        <div class="text-gray-800 w-6 h-6 mb-3">
-                            <ion-icon name="logo-html5" class="scale-150"></ion-icon>
+                    <div
+                        class="bg-slate-800 dark:bg-slate-300 hover:bg-slate-700 dark:hover:bg-slate-200 hover:-translate-y-4 z-[1] transition p-5 rounded-md">
+                        <div class="text-gray-200 dark:text-gray-800 w-6 h-6 mb-3">
+                            <ion-icon name="logo-html5" class="hover:animate-spin scale-150"></ion-icon>
                         </div>
-                        <h1 class="font-semibold text-lg text-gray-600 mb-1">Web Developer</h1>
-                        <p class="text-md text-gray-600">HTML, CSS, Javascript</p>
+                        <h1 class="font-semibold text-lg text-gray-200 dark:text-gray-600 mb-1">Web Developer</h1>
+                        <p class="text-md text-gray-300 dark:text-gray-600">HTML, CSS, Javascript</p>
                     </div>
-                    <div class="bg-slate-300 hover:bg-slate-200 hover:-translate-y-4 z-[1] transition p-5 rounded-md">
-                        <div class="text-gray-800 w-6 h-6 mb-3">
-                            <ion-icon name="logo-css3" class="scale-150"></ion-icon>
+                    <div
+                        class="bg-slate-800 dark:bg-slate-300 hover:bg-slate-700 dark:hover:bg-slate-200 hover:-translate-y-4 z-[1] transition p-5 rounded-md">
+                        <div class="text-gray-200 dark:text-gray-800 w-6 h-6 mb-3">
+                            <ion-icon name="logo-css3" class="hover:animate-spin scale-150"></ion-icon>
                         </div>
-                        <h1 class="font-semibold text-lg text-gray-600 mb-1">Frontend Developer</h1>
-                        <p class="text-md text-gray-600">ReactJS, TailwindCSS, Bootstrap</p>
+                        <h1 class="font-semibold text-lg text-gray-200 dark:text-gray-600 mb-1">Frontend Developer</h1>
+                        <p class="text-md text-gray-300 dark:text-gray-600">ReactJS, TailwindCSS, Bootstrap</p>
                     </div>
-                    <div class="bg-slate-300 hover:bg-slate-200 hover:-translate-y-4 z-[1] transition p-5 rounded-md">
-                        <div class="text-gray-800 w-6 h-6 mb-3">
-                            <ion-icon name="logo-laravel" class="scale-150"></ion-icon>
+                    <div
+                        class="bg-slate-800 dark:bg-slate-300 hover:bg-slate-700 dark:hover:bg-slate-200 hover:-translate-y-4 z-[1] transition p-5 rounded-md">
+                        <div class="text-gray-200 dark:text-gray-800 w-6 h-6 mb-3">
+                            <ion-icon name="logo-laravel" class="hover:animate-spin scale-150"></ion-icon>
                         </div>
-                        <h1 class="font-semibold text-lg text-gray-600 mb-1">Backend Developer</h1>
-                        <p class="text-md text-gray-600">PHP Laravel</p>
+                        <h1 class="font-semibold text-lg text-gray-200 dark:text-gray-600 mb-1">Backend Developer</h1>
+                        <p class="text-md text-gray-300 dark:text-gray-600">PHP Laravel</p>
                     </div>
                 </div>
-            </div>
+            </section>
             <h1 class="text-3xl font-bold mb-5 text-indigo-600" id="works">Recent Works</h1>
-            <div class="py-12">
+            <section class="py-12">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                     <a href="https://github.com/AfnanSiregar/mini-project-afnan" target="_blank"
-                        class="bg-slate-300 rounded-lg overflow-hidden">
+                        class="bg-slate-800 dark:bg-slate-300 rounded-lg overflow-hidden">
                         <img src="https://raw.githubusercontent.com/AfnanSiregar/mini-project-afnan/main/banner.png"
                             alt="mini-project-afnan" class="w-full h-36 md:h-48 object-cover">
-                        <div class="text-gray-600 p-5 w-full">
+                        <div class="text-gray-300 dark:text-gray-600 p-5 w-full">
                             <h3 class="text-lg md:text-xl mb-2 md:mb-3 font-semibold">Mini Project</h3>
                             <p class="flex flex-wrap gap-2 flex-row items-center justify-start text-xs md:text-sm">
-                                <span class="iniline-block px-2 py-1 bg-slate-200 rounded-md">
+                                <span
+                                    class="iniline-block px-2 py-1 bg-slate-900 dark:bg-slate-200 rounded-md hover:animate-ping">
                                     PHP
                                 </span>
-                                <span class="iniline-block px-2 py-1 bg-slate-200 rounded-md">
+                                <span
+                                    class="iniline-block px-2 py-1 bg-slate-900 dark:bg-slate-200 rounded-md hover:animate-ping">
                                     MySQL
                                 </span>
-                                <span class="iniline-block px-2 py-1 bg-slate-200 rounded-md">
+                                <span
+                                    class="iniline-block px-2 py-1 bg-slate-900 dark:bg-slate-200 rounded-md hover:animate-ping">
                                     Laravel
                                 </span>
-                                <span class="iniline-block px-2 py-1 bg-slate-200 rounded-md">
+                                <span
+                                    class="iniline-block px-2 py-1 bg-slate-900 dark:bg-slate-200 rounded-md hover:animate-ping">
                                     Bootstrap
                                 </span>
                             </p>
                         </div>
                     </a>
                     <a href="https://github.com/AfnanSiregar/Hotel-php" target="_blank"
-                        class="bg-slate-300 rounded-lg overflow-hidden">
+                        class="bg-slate-800 dark:bg-slate-300 rounded-lg overflow-hidden">
                         <img src="https://raw.githubusercontent.com/AfnanSiregar/Hotel-php/main/banner.png"
                             alt="mini-project-afnan" class="w-full h-36 md:h-48 object-cover">
-                        <div class="text-gray-600 p-5 w-full">
+                        <div class="text-gray-300 dark:text-gray-600 p-5 w-full">
                             <h3 class="text-lg md:text-xl mb-2 md:mb-3 font-semibold">Room Reservation</h3>
                             <p class="flex flex-wrap gap-2 flex-row items-center justify-start text-xs md:text-sm">
-                                <span class="iniline-block px-2 py-1 bg-slate-200 rounded-md">
+                                <span
+                                    class="iniline-block px-2 py-1 bg-slate-900 dark:bg-slate-200 rounded-md hover:animate-ping">
                                     PHP Native
                                 </span>
-                                <span class="iniline-block px-2 py-1 bg-slate-200 rounded-md">
+                                <span
+                                    class="iniline-block px-2 py-1 bg-slate-900 dark:bg-slate-200 rounded-md hover:animate-ping">
                                     MySQL
                                 </span>
-                                <span class="iniline-block px-2 py-1 bg-slate-200 rounded-md">
+                                <span
+                                    class="iniline-block px-2 py-1 bg-slate-900 dark:bg-slate-200 rounded-md hover:animate-ping">
                                     Bootstrap
                                 </span>
                             </p>
                         </div>
                     </a>
                 </div>
-            </div>
+            </section>
             <h1 class="text-3xl font-bold mb-5 text-indigo-600" id="about">About Me</h1>
-            <div class="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-20 py-20">
+            <section class="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-20 py-20">
                 <div class="w-full md:w-6/12">
-                    <p class="text-md text-gray-600 text-justify">
+                    <p class="text-md text-gray-300 dark:text-gray-600 text-justify">
                         My full name is Muzayyin Al-Afnan Siregar, you can call me Afnan or Muzayyin,
                         i was born in Sipirok, South Tapanuli, North Sumatera.
                         Now I live in Bandung City, studying at the PASIM University
                     </p>
                     <br>
-                    <p class="text-md text-gray-600 text-justify">
+                    <p class="text-md text-gray-300 dark:text-gray-600 text-justify">
                         I have spent the last 2+ years studying in lectures and trainings; I have knowledge including:
                         HTML, CSS, Javascript, PHP, Laravel, ReactJS, MySQL, etc.
                         Currently, I am actively looking for a job and would like to gain work experience. Feel free to
                         contact me via email at:
                     </p>
                     <a href="mailto:francafnan@gmail.com"
-                        class='block mt-3 text-md text-right md:text-lg text-gray-700 underline hover:text-indigo-500 '>francafnan@gmail.com
+                        class='block mt-3 text-md text-right md:text-lg text-gray-300 dark:text-gray-700 underline dark:hover:text-indigo-500 hover:text-indigo-500 '>francafnan@gmail.com
                     </a>
                 </div>
-                <img class="w-full md:w-5/12 rounded-lg object-cover"
+                <img class="w-full md:w-5/12 rounded-lg object-cover animate-waving-hand"
                     src="https://cdnstatic.kurogame.net/h5_manage_dist/pgr_website2.0/assets/lucia.5e3317e4.png"
                     alt="AfnanSiregar">
-            </div>
-            <div class="py-3 bg-slate-800 text-center text-gray-300 rounded-t-lg">
+            </section>
+            <footer class="py-3 bg-slate-800 text-center text-gray-300 rounded-t-lg">
                 <div class="flex flex-wrap md:gap-10 gap-10 p-5 flex-row items-center justify-center">
                     <a target="_blank" href="https://www.instagram.com/zaynafnan06_mc/" class="iniline-block px-2 py-1">
                         <ion-icon name="logo-instagram" class="scale-150"></ion-icon>
@@ -165,13 +196,28 @@
                         <ion-icon name="logo-facebook" class="scale-150"></ion-icon>
                     </a>
                 </div>
-                <p class="text-xs mt-2 text-gray-500">
+                <p class="text-xs mt-2 text-gray-300 dark:text-gray-500">
                     © AfnanSiregar 2022. All rights reserved
                 </p>
-            </div>
+            </footer>
         </div>
     </div>
 
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+        const checkbox = document.querySelector("#checkbox");
+        const html = document.querySelector("html");
+
+        const toggleDarkMode = function () {
+            checkbox.checked
+                ? html.classList.add("dark")
+                : html.classList.remove("dark");
+        }
+
+        toggleDarkMode();
+        checkbox.addEventListener("click", toggleDarkMode);
+    </script>
 </body>
 
 </html>
